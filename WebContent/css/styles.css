@@ -1,0 +1,318 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+body {
+min-height: 100%;
+height: auto;
+background: #f0f0f0;
+}
+
+#box1 {
+    background-color: green;
+    left: -50%;
+}
+
+#box2 {
+    background-color: yellow;
+}
+#logoPlacement {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transform: scale(0.5, 0.5);
+	height: 458px;
+	width: 635px;
+  }
+
+/** Reusable classes **/
+.texture{
+	color:white;
+	background-image: url('../images/tiuBackground.png');
+}
+.center{
+	margin: 0 auto;
+	}
+	
+	.buffer{
+		margin:178px auto;
+	}
+	.sm-buffer{
+		margin:100px 50px;
+	}
+	.rnd-lg-crner{
+	border-radius:10px 10px 10px 10px;
+	margin: 15px 0;
+	}
+	
+	form.horiz-form > * {
+float: left;
+}
+
+.trans-gradient {
+background: linear-gradient(rgba(0,0,0,.4) 0%, rgba(0,0,0,0) 81%, rgba(255,255,255,.4) 118%), url('../images/tiuBackground.png') no-repeat;
+}
+.txt-50-padd {
+padding: 50px;
+}
+.columns {
+-webkit-column-count: 3;
+-webkit-column-gap: 20px;
+}
+
+.white-bg{
+	background: white;
+padding: 20px 15px;
+}
+
+.pan{
+	height:300px;
+	}
+	
+	.sm-padd {
+padding: 12px 8px;
+}
+.md-padd {
+padding: 15px 40px;
+}
+.bot-padd {
+padding-bottom: 35px;
+}
+.marg-left {
+margin-left: 18px;
+}
+/** Overwritten BS classes **/
+@media(max-width:768px){
+.btn {
+width: 100%;
+margin-bottom: 15px;
+}	
+}
+@media(min-width:768px){
+.navbar-nav > li > a {
+padding-top: 15px;
+padding-bottom: 15px;
+margin-top: 45px;
+margin-bottom: 45px;
+}
+}
+
+/***********************/
+
+/*	input[type="text"] 
+  {
+    margin: 50px;
+	}
+*/
+.logo {
+height: 124px;
+}
+#logoPlacement {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transform: scale(0.5, 0.5);
+	height: 458px;
+	width: 635px;
+  }
+
+  .box {
+	display: block;
+	margin-top: -100px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+input[name="category"] {
+margin-top: 20px;
+}
+input[type="radio"].slt-radio:checked+label{
+		box-shadow: 0px 0px 3px 3px white;
+	}
+.slt-radio{
+	display:none;	
+}
+
+  .btn-block {
+    display: block;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.butt{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	position: relative;
+color: rgba(0, 0, 0, 1);
+text-decoration: none;
+display: block;
+padding: 4px;
+outline:none;
+border:0;
+font-size: 22px;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+width: 102px;
+text-align: center;
+-webkit-transition: all .1s ease;
+-moz-transition: all .1s ease;
+-ms-transition: all .1s ease;
+-o-transition: all .1s ease;
+transition: all .1s ease;
+	}
+
+.butt-lg{
+font-size: 24px;
+width:122px;
+}
+.butt:hover, .butt:active{
+color:black;
+position: relative;
+top: 6px;
+}
+.butt-space{
+	margin-right:15px;
+	}
+.happy-butt{
+	color:black;
+	background-color: rgba(241, 207, 24, 1);
+	-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+box-shadow: 0px 5px 0px rgba(219, 176, 5, 1), 0px 5px 9px rgba(0,0,0,.7);
+	}
+/*
+.happy-butt{
+	background-color: rgba(142, 226, 109, 1);
+-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+box-shadow: 0px 5px 0px rgba(127, 199, 99, 1), 0px 5px 9px rgba(0,0,0,.7);
+}*/
+.happy-butt:hover, a.happy-butt:active, input.happy-butt:active{
+	    -webkit-box-shadow: 0px 3px 0px rgba(219, 176, 5, 1), 0px 3px 6px rgba(0,0,0,.9);
+-moz-box-shadow: 0px 3px 0px rgba(219, 176, 5, 1), 0px 3px 6px rgba(0,0,0,.9);
+box-shadow: 0px 3px 0px rgba(219, 176, 5, 1), 0px 3px 6px rgba(0,0,0,.9);
+position: relative;
+top:6px;
+}
+.navbar-nav .input-group {
+margin: 15px 5px 30px;
+}
+
+.navbar-nav .input-group:nth-child(2) {
+margin-right: 15px;
+}
+.input-group.butt-group {
+margin: 34px 0;
+}
+.sad-butt {
+background: rgb(230, 230, 230);
+box-shadow: 0px 6px 0px rgb(213, 213, 213), 0px 3px 6px rgba(0,0,0,.9);
+}
+.sad-butt:hover,.sad-butt:active{
+	color: black;
+box-shadow: 0px 3px 0px rgb(167, 167, 167), 0px 3px 6px rgba(0,0,0,.9);
+position: relative;
+top: 6px;
+}
+	}
+.horiz-form{
+	color:black;
+	}
+	
+.txt-wrapper {
+width: 447px;
+/* text-align: center; */
+/* margin: 0 auto 30px; */
+margin-bottom: 22px;
+}
+.slt-radio + label {
+margin-right: 15px;
+}
+
+.ply-butts {
+margin-top: 40px;
+}
+
+/************ HARD-CODED TRIVIA BUTTS *****************/
+.butt-8 {
+background: hsl(390,60%,60%);
+}
+.butt-7 {
+background: hsl(350,60%,60%);
+}
+.butt-6 {
+background: hsl(300, 60%,60%);
+}
+.butt-5 {
+background: hsl(250, 60%,60%);
+}
+.butt-4 {
+background: hsl(200, 60%,60%);
+}
+.butt-3 {
+background: hsl(170, 60%,60%);
+}
+.butt-2 {
+background: hsl(100,60%,60%);
+}
+.butt-1 {
+background: hsl(40,60%,60%);
+}
+.butt-0 {
+background: hsl(10,60%,60%);
+}
+/*Do not use */
+@media(min-with:768px){
+	
+}
+@media(min-width:992px){
+	
+}
+@media(min-width:1200px){
+	
+}
+/*********** CALENDAR **********/
+div.calendar-week-day.no-play {
+float: left;
+width: 56px;
+height: 52px;
+margin-right: 20px;
+margin-bottom: -5px;
+margin-top: 20px;
+background: gray;
+}
+div.calendar-week-day.header {
+float: left;
+width: 56px;
+/* border: 1px solid black; */
+margin-right: 20px;
+text-align: center;
+}
+/*
+.form-signin {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-signin-heading {
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 0px 1px 2px #111;
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+.form-signin h4 {
+	margin-left: auto;
+	margin-right: auto;
+    font-weight: bold;
+    font-size: 130%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+ #inputEmail3 {
+    margin-bottom: 0px;
+  }
+
+*/

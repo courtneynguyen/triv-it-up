@@ -1,0 +1,7 @@
+/build
+*.running
+*.index
+*.prefs
+*.classpath
+*.project
+*.settings
