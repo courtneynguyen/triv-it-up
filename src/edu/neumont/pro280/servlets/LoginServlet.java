@@ -3,6 +3,7 @@ package edu.neumont.pro280.servlets;
 import java.io.IOException;
 
 import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -54,7 +55,7 @@ public class LoginServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String username = (String) req.getParameter("username");
 		String password = (String) req.getParameter("password");
-		// System.out.println("Username of logging in user... " + username);
+		System.out.println("Username of logging in user... " + username);
 		User currentUser = userManager.loginUser(username, password);
 		if (currentUser != null) {
 			HttpSession session = req.getSession();

@@ -86,8 +86,8 @@ public class UserManager {
 	}
 
 	public void createUser(User user) throws EntityExistsException,
-			ReportingSQLException, SetRollbackOnlyException,
-			EJBTransactionRolledbackException {
+	ReportingSQLException, SetRollbackOnlyException,
+	EJBTransactionRolledbackException {
 		try {
 			em.persist(user);
 		} catch (IllegalStateException e) {

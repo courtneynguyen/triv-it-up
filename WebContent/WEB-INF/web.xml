@@ -11,4 +11,9 @@
       <form-error-page>/WEB-INF/jsp/logonError.jsp</form-error-page>
     </form-login-config>
   </login-config>
+  <ejb-local-ref>
+  <ejb-ref-name>UserManager</ejb-ref-name>
+  <ejb-ref-type>Session</ejb-ref-type>
+  <local>edu.neumont.pro280.managers</local>
+  </ejb-local-ref>
 </web-app>
