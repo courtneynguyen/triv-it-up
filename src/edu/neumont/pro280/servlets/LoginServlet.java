@@ -1,7 +1,11 @@
 package edu.neumont.pro280.servlets;
 
+import edu.neumont.pro280.managers.UserManager;
+import edu.neumont.pro280.models.User;
+
 import java.io.IOException;
 
+import javax.annotation.ManagedBean;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.servlet.ServletException;
@@ -11,26 +15,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import edu.neumont.pro280.managers.UserManager;
-import edu.neumont.pro280.models.User;
-
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/login/*")
+
+@Stateless
 public class LoginServlet extends HttpServlet {
 
 	@EJB
-	UserManager userManager;
+	private UserManager userManager;
+	
 	private static final long serialVersionUID = 1L;
-
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public LoginServlet() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -56,6 +51,7 @@ public class LoginServlet extends HttpServlet {
 		String username = (String) req.getParameter("username");
 		String password = (String) req.getParameter("password");
 		System.out.println("Username of logging in user... " + username);
+//		System.out.println("JNDI=" + lookupField("localbeanEJB"));
 		User currentUser = userManager.loginUser(username, password);
 		if (currentUser != null) {
 			HttpSession session = req.getSession();

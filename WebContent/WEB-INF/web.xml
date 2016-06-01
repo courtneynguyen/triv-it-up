@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
-  <security-role>
+<web-app 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+version="3.0">
+  
+    <security-role>
     <role-name>USER</role-name>
   </security-role>
+  
   <login-config>
     <auth-method>FORM</auth-method>
     <realm-name>university</realm-name>
@@ -11,9 +18,15 @@
       <form-error-page>/WEB-INF/jsp/logonError.jsp</form-error-page>
     </form-login-config>
   </login-config>
-  <ejb-local-ref>
-  <ejb-ref-name>UserManager</ejb-ref-name>
-  <ejb-ref-type>Session</ejb-ref-type>
-  <local>edu.neumont.pro280.managers</local>
-  </ejb-local-ref>
+  
+  	<servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>edu.neumont.pro280.servlets.LoginServlet</servlet-class>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login/*</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
